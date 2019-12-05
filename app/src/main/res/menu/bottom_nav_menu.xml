@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_house_black_silhouette_without_door"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_pendapatan"
+        android:icon="@drawable/ic_pendapatan"
+        android:title="Pendapatan" />
+
+    <item
+        android:id="@+id/navigation_beban"
+        android:icon="@drawable/ic_beban"
+        android:title="Beban" />
+
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_user_symbol"
+        android:title="User" />
+
+</menu>
