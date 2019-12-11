@@ -1,5 +1,6 @@
 package com.example.mockupchart;
 
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -50,8 +51,8 @@ public class Home extends Fragment {
         BarDataSet barDataSet = new BarDataSet(barEntries(), "Cash In");
         BarDataSet barDataSet2 = new BarDataSet(barEntries2(), "Cash Out");
 
-        barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-        barDataSet2.setColors(ColorTemplate.COLORFUL_COLORS);
+        barDataSet.setColor(Color.RED);
+        barDataSet2.setColor(Color.BLUE);
 
         Description description = new Description();
         description.setText("");
