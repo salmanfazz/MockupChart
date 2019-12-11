@@ -14,7 +14,7 @@ public class User extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle saveInstanceState) {
-        return inflater.inflate(R.layout.activity_home, null);
+        return inflater.inflate(R.layout.activity_user, null);
     }
 
     @Override
