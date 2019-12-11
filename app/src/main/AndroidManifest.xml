@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pendapatan"></activity>
+        <activity android:name=".ItemTransaction"></activity>
+        <activity android:name=".Pendapatan" />
         <activity android:name=".Beban" />
         <activity android:name=".User" />
         <activity android:name=".Home" />
