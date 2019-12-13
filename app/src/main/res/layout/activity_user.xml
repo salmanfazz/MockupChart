@@ -12,10 +12,10 @@
         android:layout_height="40dp"
         android:layout_marginLeft="30dp"
         android:background="@drawable/button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutMain"
         android:hint="Log Out"
-        android:textColorHint="#FFFFFF"/>
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutMain" />
 
     <LinearLayout
         android:id="@+id/layoutMain"
@@ -86,14 +86,17 @@
         android:id="@+id/imgProfile"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/ic_user_symbol"
         android:scaleType="centerCrop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom"
         app:riv_corner_radius="30dp"
         app:riv_mutate_background="true"
         app:riv_oval="true" />
+
+    <include
+        android:id="@+id/custom"
+        layout="@layout/custom_toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
