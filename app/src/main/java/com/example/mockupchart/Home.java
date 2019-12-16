@@ -40,6 +40,7 @@ public class Home extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         barChart = getView().findViewById(R.id.chart);
+        barChart.setOnClickListener(this);
         cashBank = (CardView) getView().findViewById(R.id.cashBank);
         cashBank.setOnClickListener(this);
         labaRugi = (CardView) getView().findViewById(R.id.labaRugi);
@@ -84,7 +85,7 @@ public class Home extends Fragment implements View.OnClickListener {
         barChart.getXAxis().setAxisMinimum(0);
 
         barChart.groupBars(0, groupSpace, barSpace);
-        barChart.setTouchEnabled(false);
+        barChart.setTouchEnabled(true);
         barChart.invalidate();
     }
 
@@ -125,6 +126,11 @@ public class Home extends Fragment implements View.OnClickListener {
                 fragmentTransaction.replace(R.id.fragment_container, detailLabaRugi);
                 fragmentTransaction.commit();
                 break;
+
+            case R.id.chart:
+                DetailCashInCashOut detailCashInCashOut = new DetailCashInCashOut();
+                fragmentTransaction.replace(R.id.fragment_container, detailCashInCashOut);
+                fragmentTransaction.commit();
         }
     }
 }
