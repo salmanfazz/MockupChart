@@ -1,7 +1,6 @@
 package com.example.mockupchart;
 
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +8,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Description;
@@ -21,15 +20,15 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends Fragment {
+public class Home extends Fragment implements View.OnClickListener {
     BarChart barChart;
     ArrayList<BarEntry> barEntries;
     ArrayList<String> labelNames;
+    CardView labaRugi, cashBank;
     Toolbar toolbar;
 
     @Nullable
@@ -40,11 +39,16 @@ public class Home extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        barChart = getView().findViewById(R.id.chart);
+        cashBank = (CardView) getView().findViewById(R.id.cashBank);
+        cashBank.setOnClickListener(this);
+        labaRugi = (CardView) getView().findViewById(R.id.labaRugi);
+        labaRugi.setOnClickListener(this);
+
         setupChart();
     }
 
     private void setupChart() {
-        barChart = getView().findViewById(R.id.chart);
         barEntries = new ArrayList<>();
         labelNames = new ArrayList<>();
 
@@ -61,7 +65,7 @@ public class Home extends Fragment {
         BarData barData = new BarData(barDataSet, barDataSet2);
         barChart.setData(barData);
 
-        String[] months = new String[] {"01 Jan", "01 Feb", "01 Mar", "01 Apr"};
+        String[] months = new String[]{"01 Jan", "01 Feb", "01 Mar", "01 Apr"};
 
         XAxis xAxis = barChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(months));
@@ -86,21 +90,38 @@ public class Home extends Fragment {
 
     private List<BarEntry> barEntries() {
         barEntries = new ArrayList<>();
-        barEntries.add(new BarEntry(1,2));
-        barEntries.add(new BarEntry(2,4));
-        barEntries.add(new BarEntry(3,6));
-        barEntries.add(new BarEntry(4,8));
+        barEntries.add(new BarEntry(1, 2));
+        barEntries.add(new BarEntry(2, 4));
+        barEntries.add(new BarEntry(3, 6));
+        barEntries.add(new BarEntry(4, 8));
 
         return barEntries;
     }
 
     private List<BarEntry> barEntries2() {
         barEntries = new ArrayList<>();
-        barEntries.add(new BarEntry(1,4));
-        barEntries.add(new BarEntry(2,6));
-        barEntries.add(new BarEntry(3,8));
-        barEntries.add(new BarEntry(4,10));
+        barEntries.add(new BarEntry(1, 4));
+        barEntries.add(new BarEntry(2, 6));
+        barEntries.add(new BarEntry(3, 8));
+        barEntries.add(new BarEntry(4, 10));
 
         return barEntries;
+    }
+
+    @Override
+    public void onClick(View view) {
+        FragmentTransaction fragmentTransaction =
+                getFragmentManager().beginTransaction();
+
+        switch (view.getId()) {
+            case R.id.cashBank:
+                DetailCashBank detailCashBank = new DetailCashBank();
+                fragmentTransaction.replace(R.id.fragment_container, detailCashBank);
+                fragmentTransaction.commit();
+                break;
+
+            case R.id.labaRugi:
+                break;
+        }
     }
 }

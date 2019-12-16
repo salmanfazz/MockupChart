@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemRincian"></activity>
+        <activity android:name=".DetailCashBank"></activity>
+        <activity android:name=".ItemRincian" />
         <activity android:name=".ItemTransaction" />
         <activity android:name=".Pendapatan" />
         <activity android:name=".Beban" />
