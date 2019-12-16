@@ -8,12 +8,9 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -24,27 +21,20 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends Fragment implements View.OnClickListener {
-    BarChart barChart;
+public class Charts extends Fragment {
+    HorizontalBarChart barChart;
     ArrayList<BarEntry> barEntries;
     ArrayList<String> labelNames;
-    CardView labaRugi, cashBank;
-    Toolbar toolbar;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle saveInstanceState) {
-        return inflater.inflate(R.layout.activity_home, null);
+        return inflater.inflate(R.layout.activity_charts, null);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         barChart = getView().findViewById(R.id.chart);
-        cashBank = (CardView) getView().findViewById(R.id.cashBank);
-        cashBank.setOnClickListener(this);
-        labaRugi = (CardView) getView().findViewById(R.id.labaRugi);
-        labaRugi.setOnClickListener(this);
-
         setupChart();
     }
 
@@ -106,25 +96,5 @@ public class Home extends Fragment implements View.OnClickListener {
         barEntries.add(new BarEntry(4, 10));
 
         return barEntries;
-    }
-
-    @Override
-    public void onClick(View view) {
-        FragmentTransaction fragmentTransaction =
-                getFragmentManager().beginTransaction();
-
-        switch (view.getId()) {
-            case R.id.cashBank:
-                DetailCashBank detailCashBank = new DetailCashBank();
-                fragmentTransaction.replace(R.id.fragment_container, detailCashBank);
-                fragmentTransaction.commit();
-                break;
-
-            case R.id.labaRugi:
-                DetailLabaRugi detailLabaRugi = new DetailLabaRugi();
-                fragmentTransaction.replace(R.id.fragment_container, detailLabaRugi);
-                fragmentTransaction.commit();
-                break;
-        }
     }
 }
