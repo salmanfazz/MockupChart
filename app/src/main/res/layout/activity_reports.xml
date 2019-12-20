@@ -14,7 +14,7 @@
         android:layout_marginLeft="20dp"
         android:text="Pendapatan"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -27,7 +27,7 @@
         android:layout_marginTop="5dp"
         android:text="Nama Akun"
         android:textColor="#000000"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pendapatan" />
 
@@ -38,7 +38,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:text="2.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/namaAkun1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pendapatan" />
@@ -51,7 +51,7 @@
         android:layout_marginTop="5dp"
         android:text="Nama Akun"
         android:textColor="#000000"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namaAkun1" />
 
@@ -62,7 +62,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:text="4.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/namaAkun1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line" />
@@ -74,7 +74,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:text="2.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/namaAkun2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namaAkun1" />
@@ -86,7 +86,7 @@
         android:layout_marginLeft="20dp"
         android:text="Beban"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total" />
@@ -99,7 +99,7 @@
         android:layout_marginTop="5dp"
         android:text="Nama Akun"
         android:textColor="#000000"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/beban" />
 
@@ -110,7 +110,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:text="1.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/namaAkun3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/beban" />
@@ -123,7 +123,7 @@
         android:layout_marginTop="5dp"
         android:text="Nama Akun"
         android:textColor="#000000"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namaAkun3" />
 
@@ -134,7 +134,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:text="2.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/namaAkun1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line2" />
@@ -146,7 +146,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:text="1.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/namaAkun1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namaAkun3" />
@@ -168,7 +168,7 @@
         android:layout_marginLeft="165dp"
         android:layout_marginTop="20dp"
         android:text="2.000 JT"
-        android:textSize="15dp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toRightOf="@id/labaRugi"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total2" />

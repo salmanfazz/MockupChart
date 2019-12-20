@@ -43,7 +43,7 @@
         android:layout_marginTop="15dp"
         android:text="Operational"
         android:textColor="#000000"
-        android:textSize="18dp"
+        android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cashIn" />
@@ -185,7 +185,7 @@
         android:layout_marginTop="5dp"
         android:text="Investasi"
         android:textColor="#000000"
-        android:textSize="18dp"
+        android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total2" />
@@ -325,7 +325,7 @@
         android:layout_marginLeft="20dp"
         android:text="Arus Kas"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back" />
 
@@ -411,7 +411,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="9.000 JT"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -448,7 +448,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="9.000 JT"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
